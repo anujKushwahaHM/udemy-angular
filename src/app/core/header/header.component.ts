@@ -13,12 +13,12 @@ export class HeaderComponent {
   }
 
   onSaveData() {
-    this.dataStorageService.storeRecipes()
-      .subscribe(
-        (response: Response) => {
-          console.log(response);
-        }
-      );
+    // this.dataStorageService.storeRecipes()
+    //   .subscribe(
+    //     (response: Response) => {
+    //       console.log(response);
+    //     }
+    //   );
   }
 
   onFetchData() {
