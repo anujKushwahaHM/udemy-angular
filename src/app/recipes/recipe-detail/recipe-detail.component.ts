@@ -42,7 +42,7 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onDeleteRecipe() {
-    this.recipeService.deleteRecipe(this.id + 1).subscribe((res:any) =>
+    this.recipeService.deleteRecipe(this.id).subscribe((res:any) =>
     {
       console.log(res)
     });
