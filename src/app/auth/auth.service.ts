@@ -9,10 +9,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   signupUser(email: string, password: string) {
-    debugger
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      debugger
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorCode);

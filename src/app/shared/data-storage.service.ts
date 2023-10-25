@@ -14,9 +14,7 @@ export class DataStorageService {
 
   storeRecipes() {
     const token = this.authService.getToken();
-
-    // return this.http.put('https://ng-recipe-book.firebaseio.com/recipes.json?auth=' + token, this.recipeService.getRecipes());
-  }
+ }
 
   getRecipes() {
     const token = this.authService.getToken();
@@ -34,7 +32,6 @@ export class DataStorageService {
     ))
     .subscribe(
       (recipes: Recipe[]) => {
-        // this.recipeService.setRecipes(recipes);
       }
     )
   }

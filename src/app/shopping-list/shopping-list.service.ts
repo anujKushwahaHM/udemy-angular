@@ -23,6 +23,7 @@ export class ShoppingListService {
   }
 
   addIngredients(ingredients: Ingredient[]) {
+    debugger
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.ingredients.slice());
   }

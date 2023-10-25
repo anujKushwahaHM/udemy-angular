@@ -15,7 +15,8 @@ const POPSICLE = 'http://www.rawfamily.com/wp-content/uploads/iStock_00002486902
 
 @Injectable()
 export class RecipeService {
-  // recipesChanged = new Subject<Recipe[]>();
+  recipesChanged = new Subject<Recipe[]>();
+  static slService: ShoppingListService = new ShoppingListService;
 
   // private recipes: Recipe[] = [
   //   new Recipe('Fruit', 'Fruit Salad', FRUIT, [new Ingredient('Apple', 3), new Ingredient('Banans', 4)]),
@@ -25,7 +26,7 @@ export class RecipeService {
   //   new Recipe('Pie', 'Pretty & Attractive', PIE, [new Ingredient('Power', 10), new Ingredient('Fork', 1)]),
   //   new Recipe('Popsicle', 'Cold & Refreshing', POPSICLE, [new Ingredient('Fruits', 5), new Ingredient('Popsicle Steak', 1)])
   // ];
-  // constructor(private slService: ShoppingListService) {}
+  constructor() {}
 
   // setRecipes(recipes: Recipe[]) {
   //   this.recipes = recipes;
@@ -40,9 +41,9 @@ export class RecipeService {
   //   return this.recipes[index];
   // }
 
-  // addIngredientsToShoppingList(ingredients: Ingredient[]) {
-  //   this.slService.addIngredients(ingredients);
-  // }
+  public static addIngredientsToShoppingList(ingredients: Ingredient[]) {
+    this.slService.addIngredients(ingredients);
+  }
 
   // addRecipe(recipe: Recipe) {
   //   this.recipes.push(recipe);
